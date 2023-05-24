@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Alkatra:wght@400;600&family=Anuphan:wght@300;500;600&family=Noto+Serif+Gujarati:wght@300&family=Nunito:wght@200;300;400;700&family=PT+Serif:ital,wght@1,400;1,700&family=Poppins:ital,wght@0,200;0,300;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:wght@800&family=Roboto:wght@100&display=swap"
+        rel="stylesheet">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="Portfolio.css">
+</head>
+
+<!-- HOME -->
+
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="logo.png" class="logo">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Contact</a></li> 
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>Full stack Web Developer</p>
+                <h1>Hi ,I'm <span>Kush Patel</span><br> From India</h1>
+            </div>
+        </div>
+    </div>
+
+    <!-- ABOUT -->
+
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="IMG20220401102020.jpg" alt="Profile Pic">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>I'm a Full Stack Web Developer
+                        currently pursuing BTECH in Computer Science
+                        from KIIT University Bhubaneshwar. Currently I'm learning Full Stack Web Development
+                        I have finished learning Frontend Development (HTML,CSS,Javascript and DOM)
+                        Now i will try my hands in Backend Development.</p>
+
+                        <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                            <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                            <p class="tab-links" onclick="opentab('education')">Education</p>
+                        </div>
+                        <div class="tab-contents active-tab" id="skills">
+                            <ul>
+                                <li><span>Web Development</span><br>Designing Responsive websites</li>
+                                <li><span>Programming</span><br> C and C++ <br>Data Structure <br>Java</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="experience">
+                            <ul>
+                                <li><span>Current workspace </span><br> Studying</li>
+                                
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="education">
+                            <ul>
+                                <li><span>2021-current</span><br>BTECH from KIIT University Bhubnaeshwar</li>
+                                <li><span>2019-2021</span><br> Higher Secondary Education</li>
+                                <li><span>2006-2019</span> <br> Primary Secondary Education</li>
+                            </ul>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+    let tablinks = document.getElementsByClassName("active-link");
+    let tabcontents = document.getElementsByClassName("active-tab");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab")
+    }
+</script>
+</body>
+
+</html>
