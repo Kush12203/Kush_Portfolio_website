@@ -10,8 +10,12 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Alkatra:wght@400;600&family=Anuphan:wght@300;500;600&family=Noto+Serif+Gujarati:wght@300&family=Nunito:wght@200;300;400;700&family=PT+Serif:ital,wght@1,400;1,700&family=Poppins:ital,wght@0,200;0,300;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:wght@800&family=Roboto:wght@100&display=swap"
         rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@700&display=swap" rel="stylesheet">
     <title>Portfolio</title>
     <link rel="stylesheet" href="Portfolio.css">
+    <script src="https://kit.fontawesome.com/534d779238.js" crossorigin="anonymous"></script>
 </head>
 
 <!-- HOME -->
@@ -20,14 +24,17 @@
     <div id="header">
         <div class="container">
             <nav>
-                <img src="logo.png" class="logo">
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Portfolio</a></li>
-                    <li><a href="#">Contact</a></li> 
+                
+                <p> <span>    </span></p>
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li> 
+                    <i class="fas fa-times" onclick="closemenu()"></i>
                 </ul>
+                <i class="fas fa-bars" onclick="openmenu()"></i>
             </nav>
             <div class="header-text">
                 <p>Full stack Web Developer</p>
@@ -40,17 +47,17 @@
 
     <div id="about">
         <div class="container">
-            <div class="row">
+            <div class="row"> 
                 <div class="about-col-1">
-                    <img src="IMG20220401102020.jpg" alt="Profile Pic">
+                    <img src="Profile.JPG" alt="Profile Pic">
                 </div>
                 <div class="about-col-2">
                     <h1 class="sub-title">About Me</h1>
                     <p>I'm a Full Stack Web Developer
                         currently pursuing BTECH in Computer Science
-                        from KIIT University Bhubaneshwar. Currently I'm learning Full Stack Web Development
-                        I have finished learning Frontend Development (HTML,CSS,Javascript and DOM)
-                        Now i will try my hands in Backend Development.</p>
+                        from KIIT University Bhubaneshwar. Currently, I'm learning Full Stack Web Development.
+                        I have finished learning Frontend Development (HTML,CSS, Javascript and DOM),
+                        Now I will try my hands in Backend Development.</p>
 
                         <div class="tab-titles">
                             <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
@@ -81,23 +88,102 @@
         </div>
     </div>
 
-    <script>
-    let tablinks = document.getElementsByClassName("active-link");
-    let tabcontents = document.getElementsByClassName("active-tab");
+      <!-- Services -->
+ 
+ <div id="services">
+    <div class="container">
+        <h1 class="sub-title">My Services</h1>
+        <div class="services-list"> 
+            <div>
+                <i class="fa-solid fa-code"></i>
+                <h2>Web Development</h2> 
+                <p>I am a Full Stack Web Developer and familiar with Frontend Development (HTML, CSS, and Javascript). Now I am focusing on learning Backend Development (MERN stack)  </p>
+             
+            </div>
+            <div>
+                <i class="fa-solid fa-crop"></i>
+                <h2>Programming</h2> 
+                <p>I am trying to learn and practice programming alongside Web Development</p>
+                
+            </div>
+            <div style="background-color: #080808;">
+                
+            </div>
+        </div>
+    </div>
+ </div>
 
-    function opentab(tabname){
-        for(tablink of tablinks){
-            tablink.classList.remove("active-link");
-        }
+ <!-- Portfolio -->
 
-        for(tabcontent of tabcontents){
-            tabcontent.classList.remove("active-tab");
-        }
+ <div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">My Work</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="Instagram.jpeg" alt="">
+                <div class="layer">
+                    <h3>Instagram Clone</h3>
+                    <p>I have created an Instagram Clone using HTML and CSS</p>
+                 <a href="https://kush12203.github.io/Instagram_Clone/" target="_blank"><i class="fa-solid fa-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="Ping_Pong.jpg" alt="" style="height: 527.5px;">
+                <div class="layer">
+                    <h3>Ping Pong Score Keeper</h3>
+                    <p>I have created the Score Keeper using HTML and Bulma</p>
+                 <a href="https://kush12203.github.io/Score_Keeper/" target="_blank"><i class="fa-solid fa-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="Candy.webp" style="height: 527.5px;" alt="">
+                <div class="layer">
+                    <h3>Musuem Of Candy</h3>
+                    <p>I have created a fake responsive website using Media Query</p>
+                 <a href="https://kush12203.github.io/Museum_Candy/" target="_blank"><i class="fa-solid fa-up-right-from-square"></i></a>
+                </div>
+            </div>
+        </div>
+        <a href="https://github.com/Kush12203" target="_blank" class="btn">See More</a>
+    </div>
+ </div>
 
-        event.currentTarget.classList.add("active-link");
-        document.getElementById(tabname).classList.add("active-tab")
-    }
-</script>
+
+ <!-- Contact -->
+ <div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p> <i class="fa-solid fa-paper-plane"></i>kushpatelvk@gmail.com</p>
+                <p><i class="fa-solid fa-phone"></i>+91 6359281236</p>
+                <div class="social-icons">
+                    <a href="https://twitter.com/KushPatel__12" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/_kush_1202/?hl=en" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/kush-patel-269331223/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://github.com/Kush12203" target="_blank"><i class="fa-brands fa-github"></i></a>
+                </div>
+                <a href="KushPatel_InternshalaResume.pdf" download class="btn btn2">Download CV</a>
+            </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="Email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button class="btn btn2">Submit</button>
+                </form>
+                <span id="msg"></span>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+      <p> Copyright <i class="fa-regular fa-copyright "></i> Kush. Made with <i class="fas fa-heart"></i> by Kush Patel</p>
+    </div>
+ </div>
+
+ <!-- Javascript -->
+   <script src="Portfolio.js"></script>
+
 </body>
 
-</html>
+</html>  
